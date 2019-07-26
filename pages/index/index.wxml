@@ -1,0 +1,26 @@
+<swiper class="images-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
+  <block wx:for="{{imgUrls}}" wx:key='*this'>
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" id='{{item.target}}' />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='menuTab'>
+  <view class='menuLis {{actIndex=="first"?"actColor":""}}' id='first' bindtap="changeMenu">游戏介绍</view>
+  <view class='menuLis {{actIndex=="second"?"actColor":""}}' id='second' bindtap="changeMenu">技巧与攻略</view>
+  <view class='menuLis {{actIndex=="third"?"actColor":""}}' id='third' bindtap="changeMenu">游戏特色</view>
+</view>
+
+<scroll-view scroll-y style="flex:1;overflow:hidden;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class='leassonListOut' wx:for="{{leassonList}}" wx:key="{{item.id}}">
+
+    <view class='leassonList' data-id="{{item.id}}" bindtap="seeDetail">
+      <view class='title'>
+        {{item.title}}
+      </view>
+      <button class="btn" bindtap="gomine">立即游戏</button>
+    </view>
+
+  </view>
+</scroll-view>

@@ -1,0 +1,34 @@
+<swiper class="images-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" bindchange="bindchange">
+  <block wx:for="{{imgUrls}}" wx:key='*this'>
+    <swiper-item>
+      <image src="{{item.url}}" class="slide-image" id='{{item.target}}' />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<view wx:for="{{xcxList}}" wx:for-index="index" class="xcxList">
+  <view class="titleImage">
+    <image src="{{item.typeLogo}}" class="item_img" mode="widthFix"></image>
+    <view class="title">
+      {{item.typeValue}}
+    </view>
+  </view>
+  <view wx:for="{{item.lists}}" wx:for-item="listsitem" wx:for-index="contentindex">
+    <view class="float">
+      <view class="content_column" bindtap="lists" data-jumpAppId="{{listsitem.jumpAppId}}" data-jumpUrl="{{listsitem.jumpUrl}}">
+        <image src="{{listsitem.logo}}" class="lists_img"></image>
+        <view class="content_title">{{listsitem.jumpName}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view wx:for="{{item.lists}}" wx:for-item="lists">
+    <view class="float">
+      <view class="content_column">
+        <image src="{{lists.logo}}" class="lists_img"></image>
+        <view class="content_title">{{lists.jumpName}}</view>
+      </view>
+    </view>
+  </view> -->
+</view>

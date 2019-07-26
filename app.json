@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/about/about",
+    "pages/issus/issus",
+    "pages/allgame/allgame",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx44300b475875f54c",
+    "wxc78a53f6285033a3",
+    "wx443178cb15ba0af7",
+    "wx8b2b63cd91553311",
+    "wx1203f1d67bd6c638",
+    "wx023671afb85ac673",
+    "wx21354540d8a1b76d",
+    "wxfa8dc7bd3f566df0",
+    "wx3f3fa63882470cd6",
+    "wx3bd0c622795f2e7e"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

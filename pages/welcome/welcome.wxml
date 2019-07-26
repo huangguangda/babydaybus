@@ -1,0 +1,3 @@
+<!--pages/welcome/welcome.wxml-->
+<image style="width: 100%; height: 505px;" src="../images/welcome.jpg" ></image>
+

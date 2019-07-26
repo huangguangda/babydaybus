@@ -1,0 +1,57 @@
+.images-box {
+  width: 100%;
+  height: 360rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.menuTab {
+  width: 100%;
+  flex: 0 0 38px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+  color: #262626;
+}
+
+.menuLis {
+  width: 30%;
+  height: 100%;
+  line-height: 38px;
+  text-align: center;
+}
+
+.actColor {
+  color: #9f0b2c;
+  border-bottom: 2rpx solid #9f0b2c;
+}
+
+.leassonListOut {
+  height: 730rpx;
+  background-color: #f8f7f6;
+}
+
+.leassonList {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px 12px 0 12px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.btn {
+  width: 700rpx;
+  position: fixed;
+  bottom: 15rpx;
+  color: white;
+  background-color: #ff6004;
+}

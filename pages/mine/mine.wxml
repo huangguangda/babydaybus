@@ -1,0 +1,36 @@
+<view class='head head-height'>
+  <block wx:if="{{!hasUserInfo && canIUse}}">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="../images/timg.png" mode="cover"></image>
+      <text class="userinfo-nickname">授权登陆</text>
+    </view>
+    <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  </block>
+  <block wx:else>
+    <view class="userinfo">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </block>
+</view>
+
+<view class="hr"></view>
+<view class="item" bindtap='about'>
+  <view class="title">关于</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="line"></view>
+
+<view class="item" bindtap='issus'>
+  <view class="title">设置</view>
+  <view class="detail2">
+    <text> ></text>
+  </view>
+</view>
+<view class="hr"></view>
+
+<button class="kf_button" open-type="contact" session-from="weapp" size="20" type="default-light">
+    <image class="kf_image" src="../images/kf.png"></image>
+</button>
