@@ -12,16 +12,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var data = wx.getStorageSync('data')
-    if (data == 1) {
-      wx.navigateTo({
-        url: '/pages/allgame/allgame',
+    setTimeout(function () {
+      wx.showLoading({
+        title: '加载中',
       })
-    }else {
-      wx.navigateTo({
-        url: '/pages/index/index',
-      })
-    }
+      var data = wx.getStorageSync('data')
+      if (data == 1) {
+        wx.redirectTo({
+          url: '/pages/allgame/allgame',
+        })
+      } else {
+        wx.redirectTo({
+          url: '/pages/index/index',
+        })
+      }
+      wx.hideLoading()
+    }, 1000)
   },
 
   /**

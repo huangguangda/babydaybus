@@ -50,7 +50,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const ghId = 'gh_2dc66d31473a'
+    const ghId = 'gh_43ff8f22187b'
     var _this = this;
     wx.request({
       url: 'https://hundunxcx.com:808/back/auth/yy/xcx/banner/get/public',

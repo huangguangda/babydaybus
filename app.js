@@ -75,7 +75,7 @@ App({
       success: res => {
         console.log("app.js->", res.code, res)
         const code = res.code
-        const ghId = 'gh_2dc66d31473a'
+        const ghId = 'gh_43ff8f22187b'
         wx.request({
           url: 'https://hundunxcx.com:808/xcx/strategy/isCheck',
           data: {

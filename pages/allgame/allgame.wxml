@@ -5,9 +5,7 @@
     </swiper-item>
   </block>
 </swiper>
-
-
-<view wx:for="{{xcxList}}" wx:for-index="index" class="xcxList">
+<view wx:for="{{xcxList}}" wx:for-index="index" class="xcxList" wx:if="{{index < xcxList.length-1}}">
   <view class="titleImage">
     <image src="{{item.typeLogo}}" class="item_img" mode="widthFix"></image>
     <view class="title">
@@ -22,13 +20,29 @@
       </view>
     </view>
   </view>
+  <view class="clean"></view>
+  <view wx:if="{{contentindex !== listsitem.length-1}}" class="hr"></view>
+</view>
 
-  <!-- <view wx:for="{{item.lists}}" wx:for-item="lists">
-    <view class="float">
+<view wx:for="{{xcxList}}" wx:for-index="index" class="xcxList" wx:if="{{index == xcxList.length-1}}">
+  <view class="titleImage">
+    <image src="{{item.typeLogo}}" class="item_img" mode="widthFix"></image>
+    <view class="title">
+      {{item.typeValue}}
+    </view>
+  </view>
+  <view wx:for="{{item.lists}}" wx:for-item="listsitem" wx:for-index="contentindex">
+    <view bindtap="lists" data-jumpAppId="{{listsitem.jumpAppId}}" data-jumpUrl="{{listsitem.jumpUrl}}">
+      <view class="listsitem_image">
+        <image src="{{listsitem.logo}}" class="lists_img"></image>
+      </view>
       <view class="content_column">
-        <image src="{{lists.logo}}" class="lists_img"></image>
-        <view class="content_title">{{lists.jumpName}}</view>
+        <view class="jumpName">{{listsitem.jumpName}}</view>
+        <view class="clickNub">{{listsitem.clickNub}}人</view>
       </view>
     </view>
-  </view> -->
+    <view class="clean"></view>
+    <view wx:if="{{contentindex !== listsitem.length-1}}" class="hr"></view>
+  </view>
+
 </view>

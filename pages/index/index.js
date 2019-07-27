@@ -43,7 +43,7 @@ Page({
               // 打开成功
               var jumpId = wx.getStorageSync('jumpId')
               var openId = wx.getStorageSync('openId')
-              var ghId = 'gh_2dc66d31473a'
+              var ghId = 'gh_43ff8f22187b'
               wx.request({
                 url: 'https://hundunxcx.com:808/v1/xcx/jump/update/click/rate',
                 data: {
